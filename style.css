@@ -1,0 +1,194 @@
+/* General styles */
+body {
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+/* Container styles */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #2d2d2d;
+  box-shadow: 0px 0px 10px #000;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Heading styles */
+h1.text-center {
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px #000;
+  color: #00ff00; /* green */
+}
+
+/* Form element styles */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff00; /* green */
+}
+
+input.form-control[type="text"],
+input.form-control[type="password"],
+textarea.form-control {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  background-color: #3d3d3d;
+  border-radius: 10px;
+  border: 2px solid #00ff00; /* green */
+  color: #fff;
+}
+
+/* Button styles */
+button.btn-primary[type="button"] {
+  background-color: #00ff00; /* green */
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+}
+
+button.btn-primary[type="button"]:hover {
+  background-color: #0d0d0d;
+}
+
+button.btn-primary[type="button"]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+button.btn-primary[type="button"]:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+button.btn-primary[type="button"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+button.btn-primary[type="button"]:hover::after {
+  opacity: 1;
+}
+
+/* Result box styles */
+textarea.form-control[readonly] {
+  margin-top: 40px;
+  font-size: 24px;
+  background-color: #0d1117; /* dark blue */
+  border-radius: 10px;
+  padding: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  animation: fadeIn 1s ease-in-out, moveDown 1s ease-in-out;
+}
+
+/* Icon styles */
+.icon {
+  font-size: 36px;
+  color: #00ff00; /* green */
+  margin-right: 10px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1.text-center {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  input.form-control[type="text"],
+  input.form-control[type="password"] {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  button.btn-primary[type="button"] {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  textarea.form-control[readonly] {
+    font-size: 16px;
+    margin-top: 20pxand padding: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 600px;
+    padding: 30px;
+  }
+
+  h1.text-center {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-size: 22px;
+  }
+
+  input.form-control[type="text"],
+  input.form-control[type="password"] {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  button.btn-primary[type="button"] {
+    font-size: 22px;
+    padding: 12px 25px;
+  }
+
+  textarea.form-control[readonly] {
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 17px;
+  }
+}
+/* ASCII art */
+.ascii-art {
+  color: #00ff50; /* green */
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  margin: 10px 0;
+  white-space: pre;
+}

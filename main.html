@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption/Decryption Tool</title>
+    
+    <!-- Import external CSS files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+   <!-- Main content area -->
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <h1 class="text-center mb-4">Encryption/Decryption Tool</h1>
+          <form>
+            <div class="form-group">
+              <label for="input-text">Enter text:</label>
+              <textarea class="form-control" id="input-text" name="input-text" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="key">Enter key:</label>
+              <input type="text" class="form-control" id="key" name="key">
+            </div>
+          <button type="button" class="btn btn-primary btn-lg" onclick="encrypt()">Encrypt</button>
+          <button type="button" class="btn btn-primary btn-lg" onclick="decrypt()">Decrypt</button>
+            <div class="form-group mt-4">
+              <label for="output-text">Result:</label>
+              <textarea class="form-control" id="output-text" name="output-text" rows="5" readonly></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" id="copy-button" data-clipboard-target="#output-text" onclick="copyToClipboard()">Copy to Clipboard</button>
+          </form>
+          <div class="ascii-art">
+_____    ____     ____
+ .'     '. |    |  .'    '.
+|  .-.  || |    | |  .--.  |
+| |  | || |    | | | |  | |
+| |  | || |    | | | |  | |
+| |  | || |    | | | |  | |
+| |  | || |    | | | |  | |
+| '  | || '----' | | '  | |
+' `--' /  '.____.'  '.____.'
+ `.__.'
+</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">&copy; 2023 Psycho -En. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Import external JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+J4adLr9gYjMz1u75zKksLyIbPkBSc" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
